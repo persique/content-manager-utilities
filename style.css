@@ -1,0 +1,45 @@
+body {
+	background-color: #232323;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(70%, auto) 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.item-1 {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.item-2 {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.item-3 {
+	grid-column: 1/2;
+	grid-row: 2;
+	background-color: white;
+	padding: 5px;
+	margin: 5px;
+}
+
+#textInput {
+	overflow: hidden;
+	box-sizing: border-box;
+	background-color: red;
+	height: 100%;
+	width: 100%;
+}
+
+.submtButton {
+	background-color: rgb(38, 234, 146);
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
