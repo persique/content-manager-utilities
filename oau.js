@@ -35,13 +35,22 @@ domReady(function() {
 		newDiv.appendChild(newA);
 		document.querySelector(".grid-2").appendChild(newDiv);
 	}
+	
+	var openLinks = function(arg) {
+		arg.preventDefault();
+		var arr = document.getElementById('textInput').value.split("|");
+		arr.forEach(function(i){
+			window.open(i, '_blank');
+			addLink(i);
+		});
+	};
+	
+	document.querySelector("form").addEventListener("submit", openLinks);
+	document.querySelector("body").onkeydown = function(e){
+		if (e.keyCode == 13) {
+			openLinks(e);
+		};
+	};
+	
 
-	document.querySelector("form").addEventListener("submit", function(event){
-		  event.preventDefault();
-			var arr = document.getElementById('textInput').value.split("|");
-			arr.forEach(function(i){
-				window.open(i, '_blank');
-				addLink(i);
-			});
-	});
 });
